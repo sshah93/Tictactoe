@@ -31,25 +31,13 @@ int main()
 //prints out the entire board game
 void printBoard(char arr[3][3])
 {
-	/*cout << "    1\t    2\t    3" << endl;
-	cout << "1   " << arr[0][0] << "   |   " << arr[0][1] << "   |   " << arr[0][2] << endl;
-	cout << "----------------------" << endl;
-	cout << "2   " << arr[1][0] << "   |   " << arr[1][1] << "   |   " << arr[1][2] << endl;
-	cout << "----------------------" << endl;
-	cout << "3   " << arr[2][0] << "   |   " << arr[2][1] << "   |   " << arr[2][2] << endl;*/
-
-	//game board as required in the assignment description
+	//game board 
 
 	cout << "  1   2   3" << endl;
-	//cout << endl;
 	cout << "1 " << arr[0][0] << " | " << arr[0][1] << " | " << arr[0][2] << endl;  
-	//cout << endl;
 	cout << " ---+---+--- " << endl;
-	//cout << endl;
 	cout << "2 " << arr[1][0] << " | " << arr[1][1] << " | " << arr[1][2] << endl; 
-	//cout << endl;
 	cout << " ---+---+--- " << endl;
-	//cout << endl;
 	cout << "3 " << arr[2][0] << " | " << arr[2][1] << " | " << arr[2][2] << endl; 
 }
 
@@ -93,10 +81,7 @@ bool validMove(char arr[3][3], int row, int column)
 {
 	if (arr[row-1][column-1] == ' ')
 		return true;
-
-	else 
-		return false;
-		//cout << "This is not a valid move" << endl; 
+	return false;
 }
 
 bool checkTie(char arr[3][3])
@@ -125,7 +110,6 @@ bool checkTie(char arr[3][3])
 //checks for the winning combination if available
 bool checkWin(char board[3][3])
 {
-	//bool ignore = false; //boolean to keep the function iterating
 	bool win = false; //boolean to continue the game in case there's no winner yet
 
 	for(int x = 0; x<3; x++)             //Horizontal 
@@ -147,10 +131,6 @@ bool checkWin(char board[3][3])
 					else 
 						exit(1); 
 				}
-
-				//win = true;
-				//ignore = true; 
-				//int board[nrRows][nrColumns] = {0,}; //Clear the board so can start a new game. Assignment Part 2
 				return 0;
 			}
 
@@ -169,10 +149,6 @@ bool checkWin(char board[3][3])
 					else 
 						exit(1); 
 				}
-
-				/*win = true;
-				ignore = true;
-				int board[nrRows][nrColumns] = {0,};*/
 				return 0; 
 			}
 		}
@@ -197,11 +173,6 @@ bool checkWin(char board[3][3])
 					else 
 						exit(1); 
 				}
-			
-				/*exit(1);
-				win = true;
-				ignore = true;
-				int board[nrRows][nrColumns] = {0,};*/
 				return 0;
 			}
 
@@ -220,10 +191,6 @@ bool checkWin(char board[3][3])
 					else 
 						exit(1); 
 				}
-
-				/*win = true;
-				ignore = true;
-				int board[nrRows][nrColumns] = {0,};*/
 				return 0; 
 			}
 		}
@@ -246,10 +213,6 @@ bool checkWin(char board[3][3])
 				else 
 					exit(1); 
 			}
-
-			/*win = true;
-			ignore = true;
-			int board[nrRows][nrColumns] = {0,};*/
 			return 0;
 		}
 
@@ -268,10 +231,6 @@ bool checkWin(char board[3][3])
 				else 
 					exit(1); 
 			}
-			
-			/*win = true;
-			ignore = true;
-			int board[nrRows][nrColumns] = {0,};*/
 			return 0; 
 		}
 	}
@@ -293,10 +252,6 @@ bool checkWin(char board[3][3])
 				else 
 					exit(1); 
 			}
-
-			/*win = true;
-			ignore = true;
-			int board[nrRows][nrColumns] = {0,};*/
 			return 0;
 		}
 
@@ -315,10 +270,6 @@ bool checkWin(char board[3][3])
 				else 
 					exit(1); 
 			}
-			
-			/*win = true;
-			ignore = true;
-			int board[nrRows][nrColumns] = {0,};*/
 			return 0;
 		}
 	}
@@ -348,13 +299,6 @@ void player1Move()
 				exit(1); 
 		}
 	}
-
-	/*bool check3 = checkTie(myArray);
-	if (check3)
-	{
-		cout << "TIE GAME!!" << endl;
-		exit(1);
-	}*/
 	
 	cout << endl << "PLAYER 1: Time for you to make a move. The current status of the board is: " << endl << endl;
 	
@@ -397,13 +341,6 @@ void player2Move()
 {
 	int row, column; 
 	bool check1, check2;
-
-	/*bool check3 = checkTie(myArray);
-	if (check3)
-	{
-		cout << "TIE GAME!!" << endl;
-		exit(1);
-	}*/
 
 	if (nrMoves == 9)
 	{
